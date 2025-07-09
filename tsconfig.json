@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "outDir": "./dist",
+    "strict": false, // Problema: Strict mode desligado
+    "esModuleInterop": true,
+    "skipLibCheck": true // Problema: Pode ignorar problemas em tipos
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"] // Problema: Falta excluir pasta de build
+}
