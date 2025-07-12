@@ -1,12 +1,10 @@
-// Problema: Tipo não exportado
-interface Todo {
+export interface Todo {
   id: string;
   title: string;
-  description?: string; // Problema: Propriedade opcional sem tratamento adequado
-  completed: boolean; // Problema: Valor padrão não definido
+  description?: string | ""; // Propriedade opcional corretamente tipada (RESOLVIDO)
+  completed?: false;  // Valor padrão pode ser definido na criação do objeto (RESOLVIDO)
   createdAt: Date;
-  updatedAt?: Date; // Problema: Campo nunca atualizado
+  updatedAt?: Date; // Campo opcional, deve ser atualizado quando o Todo for modificado(RESOLVIDO)
 }
 
-// Problema: Exportação incorreta
-export default Todo;
+
